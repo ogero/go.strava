@@ -42,6 +42,8 @@ func TestActivitiesGet(t *testing.T) {
 	expected.MovingTime = 2836
 	expected.ElapsedTime = 3935
 	expected.TotalElevationGain = 22.0
+	expected.ElevationHigh = 260.0
+	expected.ElevationLow = 253.0
 	expected.StartLocation = Location{38.55, -121.82}
 	expected.EndLocation = Location{38.56, -121.78}
 	expected.City = "Davis"
@@ -51,6 +53,8 @@ func TestActivitiesGet(t *testing.T) {
 
 	expected.StartDate, _ = time.Parse(timeFormat, "2010-08-15T18:04:29Z")
 	expected.StartDateLocal, _ = time.Parse(timeFormat, "2010-08-15T11:04:29Z")
+
+	expected.TimeZone = "(GMT-08:00) America/Los_Angeles"
 
 	expected.AchievementCount = 0
 	expected.KudosCount = 1
